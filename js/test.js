@@ -205,3 +205,187 @@
 
 // Якщо значення параметра to — це рядок "upper", то функція повертала копію рядка input, але у верхньому регістрі
 // В іншому разі, функція повертала копію рядка inputу нижньому регістрі
+// function normalizeInput(input, to) {
+//   if (to === 'upper') {
+//     return input.toUpperCase();
+//   } else {
+//     return input.toLowerCase();
+//   }
+// }
+
+// console.log(normalizeInput("This ISN'T SpaM", 'lower'));
+// console.log(normalizeInput("This ISN'T SpaM", 'upper'));
+// console.log(normalizeInput('Big SALE', 'lower'));
+// console.log(normalizeInput('Big SALE', 'upper'));
+// console.log(normalizeInput('Stay Awhile and Listen', 'lower'));
+// console.log(normalizeInput('Stay Awhile and Listen', 'upper'));
+
+// Функція checkForName(fullName, firstName) приймає два параметри та повертає буль true або false - результат перевірки входження підрядка firstName у рядок fullName.
+
+// fullName - рядок, що містить повне ім'я
+// firstName - рядок, що містить ім'я для перевірки його входження в повне ім'я
+// Доповни тіло функції таким чином, щоб вона повертала результат перевірки входження імені (параметр firstName), у повне ім'я (параметр fullName). Врахуй, що регістр символів в параметрах fullName і firstName наперед не відомий. Перед перевіркою входження не забудь прирівняти їх до однакового регістру.
+// function checkForName(fullName, firstName) {
+//   const fName = fullName.toLowerCase();
+//   const firstN = firstName.toLowerCase();
+
+//   return fName.includes(firstN);
+// }
+
+// console.log(checkForName('Jason Neis', 'Jason'));
+// console.log(checkForName('Jason Neis', 'jAsOn'));
+// console.log(checkForName('Jason Neis', 'Jacob'));
+// console.log(checkForName('Caty Stars', 'Caty'));
+// console.log(checkForName('Caty Stars', 'cAtY'));
+// console.log(checkForName('Caty Stars', 'Andromeda'));
+
+// Функція checkFileExtension(fileName, ext) приймає два параметри:
+
+// fileName - рядок, що зберігає ім'я файлу з розширенням, наприклад, styles.css, hello.js тощо.
+// ext - рядок, що зберігає розширення, наприклад, .css, .js тощо
+// Доповни код функції так, щоб:
+
+// Якщо ім'я файлу fileName закінчується розширенням, зазначеним у параметрі ext, то функція повертала рядок "File extension matches"
+// В іншому разі, функція повертала рядок "File extension does not match"
+
+// function checkFileExtension(fileName, ext) {
+//   if (fileName.endsWith(ext)) {
+//     return 'File extension matches';
+//   } else {
+//     return 'File extension does not match';
+//   }
+// }
+
+// console.log(checkFileExtension('styles.css', '.css'));
+// console.log(checkFileExtension('styles.css', '.js'));
+// console.log(checkFileExtension('app.js', '.js'));
+// console.log(checkFileExtension('app.js', '.html'));
+// console.log(checkFileExtension('index.html', '.html'));
+// console.log(checkFileExtension('index.html', '.css'));
+// console.log(checkFileExtension('index.html', '.js'));
+
+//Функція getFileName(file) приймає один параметр
+
+// file - рядок з іменем файлу. Ім'я файлу може бути з розширенням, наприклад: styles.css, app.js або без, наприклад: styles, app.
+// Використовуючи методи indexOf та slice, доповни код функції таким чином, щоб:
+
+// Вона перевіряла наявність розширення в імені файлу (назва розширення відокремлюється від імені файла крапкою)
+// Якщо ім'я файлу не містить розширення, то функція повертала новий підрядок, що містить ім'я файлу без змін
+// В іншому разі функція повертала підрядок з іменем файлу, але без розширення
+
+// function getFileName(file) {
+//   const dot = file.indexOf('.');
+
+//   if (file.includes('.')) {
+//     return file.slice(0, dot);
+//   } else {
+//     return file;
+//   }
+// }
+
+// console.log(getFileName('styles.css'));
+// console.log(getFileName('app.js'));
+// console.log(getFileName('app'));
+// console.log(getFileName('index.js'));
+// console.log(getFileName('index.html'));
+// console.log(getFileName('index.css'));
+// console.log(getFileName('index'));
+
+// Функція createFileName(name, ext) приймає два параметри:
+
+// name - рядок, що зберігає ім'я файлу без розширення, яке вводить користувач. Воно може містити зайві пробіли на початку або в кінці рядка, наприклад "order ", " finance " тощо
+// ext - рядок, що зберігає розширення, наприклад "txt", "xml" тощо
+// Використовуючи синтаксис шаблонних рядків і метод trim(), доповни код функції таким чином, щоб вона повертала повне (об'єднане) ім'я файлу з доданим розширенням, зазначеним у параметрі ext у форматі ім'я.розширення. Також повне ім'я файлу не повинно містити зайвих пробілів на початку або наприкінці.
+
+// function createFileName(name, ext) {
+//   return `${name.trim()}.${ext}`;
+// }
+
+// console.log(createFileName(' order ', 'txt'));
+// console.log(createFileName('report ', 'csv'));
+// console.log(createFileName(' presentation', 'xml'));
+
+// Функція calculateTotal(number) приймає ціле число (параметр number). Доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно. Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+
+// function calculateTotal(number) {
+//   let count = 0;
+//   let i = 1;
+//   while (i <= number) {
+//     count += i;
+//     i++;
+//   }
+//   return count;
+// }
+
+// console.log(calculateTotal(1));
+// console.log(calculateTotal(3));
+// console.log(calculateTotal(0));
+// console.log(calculateTotal(18));
+// console.log(calculateTotal(24));
+// console.log(calculateTotal());
+
+// Функція calculateTotal(number) приймає ціле число (параметр number) Використовуючи цикл for, доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно. Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+// function calculateTotal(number) {
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotal(1));
+// console.log(calculateTotal(0));
+// console.log(calculateTotal(7));
+// console.log(calculateTotal(18));
+// console.log(calculateTotal(24));
+// console.log(calculateTotal());
+
+// Функція calculateEvenTotal(number) приймає ціле число (параметр number). Доповни код функції так, щоб вона повертала суму всіх парних цілих чисел від одиниці до цього числа включно. Парні числа — це ті, що можна поділити на 2 без остачі (як це зробити розглядалося у темі Арифметичні операції у модулі 1). Наприклад, якщо number дорівнює 6, то сума - це 2 + 4 + 6, тобто 12.
+
+// function calculateEvenTotal(number) {
+//   let sum = 0;
+//   for (let i = 2; i <= number; i += 2) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(calculateEvenTotal(1));
+// console.log(calculateEvenTotal(3));
+// console.log(calculateEvenTotal(7));
+// console.log(calculateEvenTotal(18));
+// console.log(calculateEvenTotal(27));
+// console.log(calculateEvenTotal());
+
+// Доповни код таким чином, щоб у змінну number записувалося перше число у проміжку від start до end, яке ділиться на 5 без остачі.
+
+// Оголошена змінна start
+// Оголошена змінна end
+// Оголошена змінна number
+// Якщо start це 6, а end це 17, то підсумкове значення змінної number дорівнює 10
+
+// const start = 6;
+// const end = 17;
+// let number;
+
+// for (let i = start; i <= end; i++) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+// console.log(number);
+
+// Функція findNumber(start, end, divisor) приймає три параметра, які є цілими числами.
+// Доповни код функції таким чином, щоб вона:
+// повертала перше число у діапазоні від start до end включно, яке ділиться на divisor без остачі
+// не використовуй оператор break
+
+// function findNumber(start, end, divisor) {
+//   for (let i = start; i <= end; i++) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+// }
+
+// console.log(findNumber(6, 9, 4));
