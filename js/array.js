@@ -146,14 +146,101 @@
 // min - ціле число, з якого починаються обчислення
 // max - ціле число, до якого включно триватимуть обчислення
 // Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max включно.
-function createArrayOfNumbers(min, max) {
-  const newArr = [];
-  for (let i = min; i <= max; i += 1) {
-    newArr.push(`${i}`);
-  }
-  return newArr;
-}
+// function createArrayOfNumbers(min, max) {
+//   const newArr = [];
+//   for (let i = min; i <= max; i += 1) {
+//     newArr.push(`${i}`);
+//   }
+//   return newArr;
+// }
 
-console.log(createArrayOfNumbers(29, 34));
-console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+// console.log(createArrayOfNumbers(14, 17));
 //=======================================================================================
+// Функція calculateTotalPrice(order) приймає один параметр order - масив чисел. Доповни функцію так, щоб вона повертала загальну суму елементів з масиву order.
+
+// function calculateTotalPrice(order) {
+//   let sum = 0;
+
+//   for (let i = 0; i < order.length; i += 1) {
+//     sum += order[i];
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+//=======================================================================================
+// Функція getEvenNumbers(start, end) має два параметри start та end,
+// які є цілими числами.
+//  Доповни код функції так, щоб вона повертала масив усіх парних чисел від start до end.
+//  Якщо жодного парного числа немає, то масив має бути пустим.
+//  Парним вважається число, яке ділиться на 2 без остачі (10 % 2 === 0). Використовуй цикл for.
+
+// function getEvenNumbers(start, end) {
+//   const newArr = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       newArr.push(i);
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(getEvenNumbers(3, 11));
+// console.log(getEvenNumbers(7, 7));
+// //=======================================================================================
+// Функція checkStorage(storage, item) приймає два параметри:
+
+// storage - масив рядків, що описує доступні товари на складі
+// item - рядок з назвою товара, наявність якого потрібно перевірити
+// Доповни код функції таким чином, щоб вона перевіряла,
+// чи присутній такий товар в масиві storage і повертала:
+
+// рядок "<item> is available to order!", де item - це назва товара, якщо товар було знайдено
+// рядок "Sorry! We are out of stock!", якщо такого товара немає в масиві
+// Зроби так, щоб пошук за ім'ям товару був незалежний від регістру, тобто наприклад "plum" і "pLuM" мають бути знайдені у масиві ["apple", "plum", "pear"].
+
+// function checkStorage(storage, item) {
+//   const str = item.toLowerCase();
+//   if (storage.includes(str)) {
+//     return `"${str} is available to order!"`;
+//   } else {
+//     return `"Sorry! We are out of stock!"`;
+//   }
+// }
+// console.log(checkStorage(['apple', 'plum', 'pear'], 'pEAr'));
+// console.log(checkStorage(['apple', 'plum', 'pear'], 'orange'));
+
+// //=======================================================================================
+// Перед розв'язанням цієї задачі варто зазначити, що таке спільні елементи. Спільними елементами масивів називають ті елементи, які присутні у всіх масивах.
+
+// Наприклад, у двох масивах [1, 3, 5] і [0, 8, 5, 3] спільними будуть числа 3 і 5, оскільки вони присутні в обох вхідних масивах. А числа 0, 1 і 8 присутні тільки в одному з масивів.
+
+// Функція getCommonElements(array1, array2), приймає два масиви (array1 та array2) довільної довжини в якості параметрів.
+// function getCommonElements(array1, array2) {
+//   const newArr1 = [];
+//   for (let i = 0; i < array1.length; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       newArr1.push(array1[i]);
+//     }
+//   }
+//   return newArr1;
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+// //=======================================================================================
+// Доповни код функції calculateTotalPrice(order) так, щоб вона повертала загальну суму чисел в масиві order. Використай цикл for...of для перебору масиву.
+// function calculateTotalPrice(order) {
+//   let sum = 0;
+//   for (const number of order) {
+//     sum += number;
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// //=======================================================================================
