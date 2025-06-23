@@ -266,3 +266,8 @@ function calculateTax(amount, taxRate = 0.2) {
 console.log(calculateTax(200, 0.1));
 console.log(calculateTax(100));
 // //=======================================================================================
+// const A = 'hello-world.com';
+// const B = A.indexOf('-'); //5
+// const C = A.lastIndexOf('.'); //11
+// console.log(B);
+// console.log(C);
