@@ -630,3 +630,6 @@ const names = books
   .toSorted((a, b) => a.localeCompare(b));
 
 console.log(names);
+
+const hotel = {};
+console.log(hotel.name);
