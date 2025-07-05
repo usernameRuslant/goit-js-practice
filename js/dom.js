@@ -218,17 +218,43 @@
 
 // formEl.addEventListener('submit', onSubmit);
 //=======================================================================
-const inputEl = document.querySelector('.js-password-input');
-const btnEl = document.querySelector('.js-password-button');
+// const inputEl = document.querySelector('.js-password-input');
+// const btnEl = document.querySelector('.js-password-button');
 
-const onClickBtn = e => {
-  if (inputEl.type === 'text') {
-    inputEl.type = 'password';
-    e.currentTarget.textContent = 'open';
-  } else {
-    inputEl.type = 'text';
-    e.currentTarget.textContent = 'close';
-  }
+// const onClickBtn = e => {
+//   if (inputEl.type === 'text') {
+//     inputEl.type = 'password';
+//     e.currentTarget.textContent = 'open';
+//   } else {
+//     inputEl.type = 'text';
+//     e.currentTarget.textContent = 'close';
+//   }
+// };
+
+// btnEl.addEventListener('click', onClickBtn);
+
+// const btnIncEl = document.querySelector('.js-increase');
+// const btnDecEl = document.querySelector('.js-decrease');
+// const boxEl = document.querySelector('.box');
+
+// onIncClick = e => {
+//   boxEl.style.width = `${boxEl.offsetWidth + 20}px`;
+//   boxEl.style.height = `${boxEl.offsetHeight + 20}px`;
+// };
+
+// onDecClick = e => {
+//   boxEl.style.width = `${boxEl.offsetWidth - 20}px`;
+//   boxEl.style.height = `${boxEl.offsetHeight - 20}px`;
+// };
+
+// btnIncEl.addEventListener('click', onIncClick);
+// btnDecEl.addEventListener('click', onDecClick);
+//=======================================================================
+const buttonEl = document.querySelector('.my-btn');
+
+onClickBtn = e => {
+  alert('Привет!');
+  buttonEl.removeEventListener('click', onClickBtn);
 };
 
-btnEl.addEventListener('click', onClickBtn);
+buttonEl.addEventListener('click', onClickBtn);
